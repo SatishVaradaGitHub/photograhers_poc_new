@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "152efc92-8cf3-4565-a829-6394b271de68",
+		"name": "usersbooking_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createuser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\":null,\r\n \"name\":\"abi\",\r\n \"ph\": 8888888888, \r\n  \"createdate\":null,\r\n  \"updatedate\":null   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/user/createuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"user",
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllofferingsList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/user/getofferings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"user",
+						"getofferings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookoffering",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\":null,\r\n \"userid\":3,\r\n \"offeringid\":1,  \r\n  \"createdate\":null,\r\n  \"updatedate\":null     \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/user/bookofferings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"user",
+						"bookofferings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getpastbookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/user/getpastbookings?userid=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"user",
+						"getpastbookings"
+					],
+					"query": [
+						{
+							"key": "userid",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

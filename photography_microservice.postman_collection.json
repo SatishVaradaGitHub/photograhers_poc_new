@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "0aa9598f-94dc-4f7e-8d3a-3cc43de36ed1",
+		"name": "photography_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "photography_microservice",
+			"item": [
+				{
+					"name": "addofferings",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " \r\n  \r\n  {\r\n    \"id\": null,\r\n    \"name\": \"jayphotography\",\r\n    \"createdate\": null,\r\n    \"updatedate\": null,\r\n    \"category\": {\r\n      \"id\": null,\r\n      \"name\": \"wedding\",\r\n      \"createdate\": null,\r\n      \"updatedate\": null,\r\n      \"images\": [\r\n        \"img1\",\r\n        \"img2\"\r\n      ],\r\n      \"vedios\": [\r\n        \"vedio1\",\r\n        \"vedio2\"\r\n      ]\r\n    },\r\n    \"subcategory\": [\r\n      {\r\n        \"id\": null,\r\n        \"name\": \"jaywedding\",\r\n        \"createdate\": null,\r\n        \"updatedate\": null\r\n      },\r\n      {\r\n        \"id\": null,\r\n        \"name\": \"sreewedding\",\r\n        \"createdate\": null,\r\n        \"updatedate\": null\r\n      }\r\n    ]\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/photographer/addofferings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"photographer",
+								"addofferings"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "getofferingsByCategoryORsubcategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/photograpgher/getofferingsbycategory?category=&subcategory=jaywedding",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"photograpgher",
+						"getofferingsbycategory"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": ""
+						},
+						{
+							"key": "subcategory",
+							"value": "jaywedding"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_photograpgher_profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\":null,\r\n \"name\":\"jay\",\r\n \"phoneno\":9999999,\r\n \"email\":\"Jay@gmail.com\",\r\n\"createdate\": null,\r\n\"updatedate\":null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/photograpgher/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"photograpgher",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllofferings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/photograpgher/getofferings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"photograpgher",
+						"getofferings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getofferingsbyid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/photograpgher/getofferingsbyid?offeringids=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"photograpgher",
+						"getofferingsbyid"
+					],
+					"query": [
+						{
+							"key": "offeringids",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
